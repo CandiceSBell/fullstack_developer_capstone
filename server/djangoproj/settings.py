@@ -34,10 +34,6 @@ ALLOWED_HOSTS = [
         'https://candicebelll-8000.theianext-0-labs-prod-misc-tools-us-east-0.'
         'proxy.cognitiveclass.ai'
     ),
-    (
-            'https://candicebelll-8000.theiadockernext-0-labs-prod-theiak8'
-        's-4-t.   'proxy.cognitiveclass
-    )
 ]
 
 CSRF_TRUSTED_ORIGINS = [
