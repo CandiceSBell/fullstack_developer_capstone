@@ -42,8 +42,8 @@ CSRF_TRUSTED_ORIGINS = [
         'proxy.cognitiveclass.ai'
     ),
     (
-        'https://candicebelll-8000.theiadockernext-0-labs-prod-theiak8s-4-tor01.'
-        'proxy.cognitiveclass.ai'
+        'https://candicebelll-8000.theiadockernext-0-labs-prod-theiak8s-4-'
+        'tor01.proxy.cognitiveclass.ai'
     )
 ]
 
@@ -110,7 +110,8 @@ DATABASES = {
 AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME':
-        'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
+        'django.contrib.auth.password_validation.'
+        'UserAttributeSimilarityValidator',
     },
     {
         'NAME':
