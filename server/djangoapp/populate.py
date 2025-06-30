@@ -8,8 +8,8 @@ def initiate():
         {"name": "Audi", "description": "Great cars. German technology"},
         {"name": "Kia", "description": "Great cars. Korean technology"},
         {"name": "Toyota", "description": "Great cars. Japanese technology"},
-    ]
-    
+    ] 
+
     car_make_instances = []
     for data in car_make_data:
         car_make_instances.append(
