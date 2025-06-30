@@ -97,7 +97,7 @@ def get_cars(request):
     cars = []
     for car_model in car_models:
         cars.append({
-            "CarModel": car_model.name, 
+            "CarModel": car_model.name,
             "CarMake": car_model.car_make.name
         })
     return JsonResponse({"CarModels": cars})
@@ -156,6 +156,6 @@ def add_review(request):
             })
     else:
         return JsonResponse({
-            "status": 403, 
+            "status": 403,
             "message": "Unauthorized"
         })

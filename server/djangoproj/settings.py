@@ -29,18 +29,26 @@ SECRET_KEY =\
 DEBUG = True
 
 ALLOWED_HOSTS = [
-        'localhost',
+    'localhost',
+    (
         'https://candicebelll-8000.theianext-0-labs-prod-misc-tools-us-east-0.'
-        'proxy.cognitiveclass.ai',
-            'https://candicebelll-8000.theiadockernext-0-labs-prod-theiak8s-4-tor01.'
-            'proxy.cognitiveclass
+        'proxy.cognitiveclass.ai'
+    ),
+    (
+            'https://candicebelll-8000.theiadockernext-0-labs-prod-theiak8'
+        's-4-t.   'proxy.cognitiveclass
+    )
 ]
 
 CSRF_TRUSTED_ORIGINS = [
+    (
         'https://candicebelll-8000.theianext-0-labs-prod-misc-tools-us-east-0.'
-        'proxy.cognitiveclass.ai',
+        'proxy.cognitiveclass.ai'
+    ),
+    (
         'https://candicebelll-8000.theiadockernext-0-labs-prod-theiak8s-4-tor01.'
         'proxy.cognitiveclass.ai'
+    )
 ]
 
 REST_FRAMEWORK = {
