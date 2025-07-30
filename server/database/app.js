@@ -58,7 +58,12 @@ app.get('/fetchReviews/dealer/:id', async (req, res) => {
 
 // Express route to fetch all dealerships
 app.get('/fetchDealers', async (req, res) => {
-//Write your code here
+  try {
+    const dealerships = await Dealerships.find(); // Fetch all dealerships
+    res.status(200).json(dealerships); // Send the data as JSON
+  } catch (error) {
+    res.status(500).json({ error: 'Error fetching dealerships' }); // Handle errors
+  }
 });
 
 // Express route to fetch Dealers by a particular state
@@ -99,16 +104,16 @@ app.post('/insert_review', express.raw({ type: '*/*' }), async (req, res) => {
   let new_id = documents[0]['id']+1
 
   const review = new Reviews({
-		"id": new_id,
-		"name": data['name'],
-		"dealership": data['dealership'],
-		"review": data['review'],
-		"purchase": data['purchase'],
-		"purchase_date": data['purchase_date'],
-		"car_make": data['car_make'],
-		"car_model": data['car_model'],
-		"car_year": data['car_year'],
-	});
+    "id": new_id,
+    "name": data.name,
+    "dealership": data.dealership,
+    "review": data.review,
+    "purchase": data.purchase,
+    "purchase_date": data.purchase_date,
+    "car_make": data.car_make,
+    "car_model": data.car_model,
+    "car_year": data.car_year,
+});
 
     try {
       const savedReview = await review.save();
